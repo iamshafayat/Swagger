@@ -1,0 +1,42 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Secure Login POC
+  description: |
+    <div class="login-form">
+      <!-- Notice Message -->
+      <div style="max-width: 420px; margin: 20px auto; padding: 15px; background-color: #e9f7ef; border-left: 5px solid #28a745; border-radius: 6px; font-family: sans-serif;">
+        <strong style="color: #155724;">This is a Proof-of-Concept login page. No data will be stored.</strong>
+      </div>
+
+      <!-- Login Heading -->
+      <h2 style="text-align:center; color:#2c3e50; font-family:sans-serif;">Welcome to the Demo Login</h2>
+
+      <!-- Login Form Container -->
+      <div style="max-width: 420px; margin: 20px auto; padding: 20px; background: #ffffff; border-radius: 8px; box-shadow: 0 6px 10px rgba(0,0,0,0.1); font-family: sans-serif;">
+        <form onsubmit="event.preventDefault(); alert('POC Only. No information collected');">
+          <div style="margin-bottom: 15px;">
+            <label for="username" style="display:block; margin-bottom:5px; color:#34495e;">Username</label>
+            <input type="text" name="username" placeholder="Enter username" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+          </div>
+          <div style="margin-bottom: 20px;">
+            <label for="password" style="display:block; margin-bottom:5px; color:#34495e;">Password</label>
+            <input type="password" name="password" placeholder="Enter password" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+          </div>
+          <button type="submit" style="width:100%; padding:12px; background-color:#007bff; border:none; color:white; font-size:16px; border-radius:4px; cursor:pointer;">Login</button>
+        </form>
+      </div>
+
+      <!-- Footer -->
+      <div style="text-align:center; margin-top:20px; font-size:12px; color:#aaa;">
+        © 2025 Login Demo
+      </div>
+    </div>
+paths:
+  /:
+    post:
+      summary: Perform login (POC only)
+      description: Dummy endpoint to simulate login. Does not collect credentials.
+      responses:
+        '200':
+          description: Login simulated successfully
