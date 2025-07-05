@@ -1,0 +1,9 @@
+{
+    "url": "https://raw.githubusercontent.com/iamshafayat/Swagger/refs/heads/main/poc/xss.yaml",
+    "urls": [
+        {
+            "url": "https://raw.githubusercontent.com/iamshafayat/Swagger/refs/heads/main/poc/xss.yaml",
+            "name": "Foo"
+        }
+    ]
+}
